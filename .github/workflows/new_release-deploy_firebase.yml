@@ -1,9 +1,10 @@
 on:
     release:
-      types: [published, created, edited]
+      types: [published]
 jobs:
   newRelease:
     runs-on: ubuntu-20.04
     steps:
-        - name: Test OK
+
+      - name: Test OK
         run: echo "Test ok"
