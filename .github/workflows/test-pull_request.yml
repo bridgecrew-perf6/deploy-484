@@ -1,13 +1,13 @@
-name: merge on pull request
-  'on': 
-    pull_request_target:
+name: Pull request
+'on':
+    pull_request:
         branches:
-        - master
+          - master
 
 jobs :
-  Test and Merge:
-    runs-on: ubuntu-20.04
-    steps:
+    Testandmerge:
+      runs-on: ubuntu-20.04
+      steps:
 
       - uses: actions/checkout@v2 
 
@@ -24,10 +24,5 @@ jobs :
       - name: test 
         run: echo TEST:OK
 
-      - name: automerge
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      
 
 
