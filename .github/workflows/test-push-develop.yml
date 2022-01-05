@@ -27,4 +27,4 @@ jobs:
         run: npm run build          
 
       - name: Test OK
-        run: "OK"
+        run: echo "Test ok"
