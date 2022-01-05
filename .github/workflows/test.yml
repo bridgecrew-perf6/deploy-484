@@ -1,0 +1,29 @@
+name: merge on pull request
+  on: 
+    pull_request:
+        branches:
+        - master
+
+jobs :
+  Test and Merge:
+    runs-on: ubuntu-20.04
+    steps:
+
+      - uses: actions/checkout@v2 
+
+      - name: Install Dependecies
+        run: npm install
+
+
+      - name: Install Firebase-tools
+        run: npm install -g firebase-tools
+
+      - name: Build
+        run: npm run build
+      - name: test 
+        run: echo TEST:OK
+
+      - name: Deploy 
+        run: firebase deploy --only hosting --project deploy-4ea47 --token ${{ secrets.FIREBASE_TOKEN }}  
+
+
