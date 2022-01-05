@@ -21,6 +21,8 @@ jobs:
 
       - name: firebase install
         run: npm install firebase
+
+      -name: same
         run: npm install firebase-tools
 
       - name: 'Build'
