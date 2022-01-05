@@ -5,23 +5,20 @@ name: Test push develop
       - develop
 
 jobs:
-  deploy:
+  TestDeploy:
     runs-on: ubuntu-20.04
     steps:
     
-      - uses: actions/checkout@v2 #Reference the major version of a release
+      - uses: actions/checkout@v2
 
-      - name: Install Dependencies
+      - name: Install dependances npm
         run: npm install
 
-      #- name: firebase install
-      #  run: npm install firebase
-
-      - name: same
+      - name: Install Firebase-tools
         run: npm install -g firebase-tools
 
-      - name: Build
+      - name: npm build
         run: npm run build          
 
-      - name: Test OK
-        run: echo "Test ok"
+      - name: Marche
+        run: echo test:valide

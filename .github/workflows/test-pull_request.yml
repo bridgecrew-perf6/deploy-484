@@ -1,28 +1,27 @@
-name: Pull request
+name: Test pull request
 'on':
     pull_request:
         branches:
           - master
 
 jobs :
-    Testandmerge:
+    TestPullRequest:
       runs-on: ubuntu-20.04
       steps:
 
       - uses: actions/checkout@v2 
 
-      - name: Install Dependecies
+      - name: Install dependances npm
         run: npm install
-
 
       - name: Install Firebase-tools
         run: npm install -g firebase-tools
 
-      - name: Build
+      - name: npm build
         run: npm run build
 
-      - name: test 
-        run: echo TEST:OK
+      - name: Marche 
+        run: echo test:valide
 
 
 
