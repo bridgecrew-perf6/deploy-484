@@ -1,13 +1,13 @@
 name: Pull request
-  on:
+on:
     pull_request:
         branches:
           - master
 
 jobs :
-  Test and merge:
-    runs-on: ubuntu-20.04
-    steps:
+    Testandmerge:
+      runs-on: ubuntu-20.04
+      steps:
 
       - uses: actions/checkout@v2 
 
@@ -24,7 +24,5 @@ jobs :
       - name: test 
         run: echo TEST:OK
 
-      - name: Deploy 
-        run: firebase deploy --only hosting --project deploy-4ea47 --token ${{ secrets.FIREBASE_TOKEN }}  
 
 
