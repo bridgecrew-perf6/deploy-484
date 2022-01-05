@@ -1,3 +1,4 @@
+name: Release deploy on Firebase
 on:
     release:
       types: [published]
