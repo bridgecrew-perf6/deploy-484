@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 name: Release deploy on Firebase
 on:
+=======
+name: Pull request
+'on':
+>>>>>>> de5fee35d3bff98b38031b1d3a15c3a2f82c158a
     pull_request:
       branches: [master]
 jobs:
