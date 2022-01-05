@@ -1,5 +1,5 @@
-name: merge on pull request
-  'on': 
+name: Pull request
+on:
     pull_request:
         branches:
           - master
