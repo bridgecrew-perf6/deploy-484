@@ -1,5 +1,5 @@
 name: Deploy push master
- on:
+  'on':
     release:
       types: [published]
 
